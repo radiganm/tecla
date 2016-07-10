@@ -37,7 +37,7 @@
 #include <errno.h>
 
 #include "ioutil.h"
-#include "history.h"
+#include "tecla_history.h" /* Mac: name change to avoid conflicts with GNU readline */
 #include "freelist.h"
 #include "errmsg.h"
 

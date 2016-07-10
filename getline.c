@@ -172,7 +172,7 @@ typedef struct termios Termios;
 #include "keytab.h"
 #include "getline.h"
 #include "ioutil.h"
-#include "history.h"
+#include "tecla_history.h" /* Mac: name change to avoid conflicts with GNU readline */
 #include "freelist.h"
 #include "stringrp.h"
 #include "chrqueue.h"
