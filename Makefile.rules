@@ -14,7 +14,7 @@ $(OBJDIR):
 COMPILE = $(CC) -c $(CFLAGS) -o $@
 
 LIB_OBJECTS = $(OBJDIR)/getline.o $(OBJDIR)/keytab.o $(OBJDIR)/freelist.o \
- $(OBJDIR)/strngmem.o $(OBJDIR)/hash.o $(OBJDIR)/history.o \
+ $(OBJDIR)/strngmem.o $(OBJDIR)/hash.o $(OBJDIR)/tecla_history.o \
  $(OBJDIR)/direader.o $(OBJDIR)/homedir.o $(OBJDIR)/pathutil.o \
  $(OBJDIR)/expand.o $(OBJDIR)/stringrp.o $(OBJDIR)/cplfile.o \
  $(OBJDIR)/cplmatch.o $(OBJDIR)/pcache.o $(OBJDIR)/version.o \
@@ -74,7 +74,7 @@ enhance$(SUFFIX): $(OBJDIR)/enhance.o $(TARGETS)
 #-----------------------------------------------------------------------
 
 $(OBJDIR)/getline.o: $(srcdir)/getline.c $(srcdir)/pathutil.h \
- $(srcdir)/libtecla.h $(OBJDIR)/keytab.h $(srcdir)/history.h \
+ $(srcdir)/libtecla.h $(OBJDIR)/keytab.h $(srcdir)/tecla_history.h \
  $(srcdir)/freelist.h $(srcdir)/stringrp.h $(srcdir)/getline.h \
  $(srcdir)/ioutil.h $(srcdir)/chrqueue.h $(srcdir)/cplmatch.h \
  $(srcdir)/expand.h $(srcdir)/errmsg.h
@@ -96,8 +96,8 @@ $(OBJDIR)/hash.o: $(srcdir)/hash.c $(srcdir)/hash.h $(srcdir)/strngmem.h \
  $(srcdir)/freelist.h
 	$(COMPILE) $(srcdir)/hash.c
 
-$(OBJDIR)/history.o: $(srcdir)/history.c $(srcdir)/ioutil.h \
- $(srcdir)/history.h $(srcdir)/freelist.h $(srcdir)/errmsg.h
+$(OBJDIR)/tecla_history.o: $(srcdir)/history.c $(srcdir)/ioutil.h \
+ $(srcdir)/tecla_history.h $(srcdir)/freelist.h $(srcdir)/errmsg.h
 	$(COMPILE) $(srcdir)/history.c
 
 $(OBJDIR)/expand.o: $(srcdir)/expand.c $(srcdir)/freelist.h \
