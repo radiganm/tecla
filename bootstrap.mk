@@ -9,7 +9,7 @@ bootstrap:
 	#autoreconf --force --install
 
 bulid: bootstrap
-	./configure && make
+	./configure --without-man-pages && make
 
 install: build
 	sudo make install
