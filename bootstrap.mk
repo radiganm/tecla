@@ -8,7 +8,7 @@
 bootstrap:
 	#autoreconf --force --install
 
-bulid: bootstrap
+build: bootstrap
 	./configure --without-man-pages && make
 
 install: build
